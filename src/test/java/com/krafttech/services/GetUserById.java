@@ -19,7 +19,7 @@ public class GetUserById {
                 .pathParam("id",ConfigurationReader.get("userID"))
                 .headers(tokenMap)
                 .when().log().all()
-                .get("/Account/v1/User/{id}").prettyPeek();
+                .get(ConfigurationReader.get("getUserByIdEP")).prettyPeek();
     }
     public void verifyUserById(){
         response.then().statusCode(200);

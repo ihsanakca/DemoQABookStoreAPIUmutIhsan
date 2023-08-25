@@ -39,6 +39,9 @@ public class Register {
 
         userID = response.path("userID");
         System.out.println("userID = " + userID);
+        System.out.println("response.path(\"username\") = " + response.path("username"));
+        ConfigurationReader.set("username",response.path("username"));
+        ConfigurationReader.set("userID",response.path("userID"));
 
     }
     public void verifyRegisterStatusCode(){

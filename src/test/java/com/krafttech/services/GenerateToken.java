@@ -35,6 +35,7 @@ public class GenerateToken {
 
         token=response.path("token");
         System.out.println("token = " + token);
+        ConfigurationReader.set("token",token);
     }
 
     public void verifyGenerateTokenStatusCode(){
